@@ -52,13 +52,24 @@
                     </div>
                 </div>
 
+
+                <!-- Contraseña -->
                 <div class="wrap_input_form">
-                    <input class="input_form" type="password" name="contrasena" placeholder="Contraseña" formControlName="contrasena" [ngClass]="{ 'is-invalid': enviado && form.contrasena.errors }">
+                    
+                    <input  class="input_form" 
+                            type="password" 
+                            name="contrasena" 
+                            placeholder="Contraseña" 
+                            formControlName="contrasena" 
+                            [ngClass]="{ 'is-invalid': enviado && form.contrasena.errors}"
+                    >
                     <span class="focus_input_form"></span>
                     <span class="icono_input_form">
                         <i class="fa fa-lock" aria-hidden="true"></i>
                     </span>
                 </div>
+
+                <!-- Mensaje de error cuando no se ingresa la contraseña -->
                 <div class="text-center">
                     <div *ngIf="enviado && form.contrasena.errors" class="text-danger mb-3">
                         <div *ngIf="form.contrasena.errors.required">
@@ -68,11 +79,26 @@
                     </div>
                 </div>
 
+                <!-- Mensaje de error cuando la contraseña no es fuerte -->
+                <div class="text-center">
+                    <div *ngIf="enviado && form.contrasena.errors" class="text-danger mb-3">
+                        <div *ngIf="form.contrasena.errors.pattern">
+                            <label class="font-weight-bold"><i class="fa fa-exclamation-circle"></i> 
+                                Error, ingrese una contraseña con al menos 8 caracteres,
+                                mayúscula, minúscula, caracteres especiales y números.
+                            </label>
+                        </div>
+                    </div>
+                </div>  
+
                 <div class="pt-3">
                     <button class="btn form_btn" type="submit">
                         Registrarse
                     </button>
                 </div>
+
+
+
 
                 <div class="text-center pt-3">
                     <a class="text-muted">¿Ya tiene cuenta?</a>

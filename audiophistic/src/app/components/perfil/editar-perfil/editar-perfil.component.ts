@@ -51,7 +51,7 @@ export class EditarPerfilComponent implements OnInit {
     });
     this.contrasena_form = this.fb.group({
       contrasena: ['', [Validators.required]],
-      confirmar: ['', [Validators.required]]
+      confirmar: ['', [Validators.required,Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]]
     });
   }
 

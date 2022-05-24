@@ -96,6 +96,7 @@
                                     <div class="form-group">
                                         <label id="contrasena_label" for="contrasena"><i class="fas fa-lock"></i>Nueva Contraseña</label>
                                         <input type="password" placeholder="Contraseña" name="contrasena" formControlName="contrasena" class="form-control" required [ngClass]="{ 'is-invalid': enviado && form_contrasena.contrasena.errors }" aria-labelledby="contrasena_label">
+                                        
                                         <div *ngIf="enviado && form_contrasena.contrasena.errors" class="invalid-feedback">
                                             <div *ngIf="form_contrasena.contrasena.errors.required">
                                                 <label class="font-weight-bold"><i class="fa fa-exclamation-circle"></i>
@@ -103,6 +104,21 @@
                                                     de contraseña es obligatorio</label>
                                             </div>
                                         </div>
+
+                                         <!-- Mensaje de error cuando la contraseña no es fuerte -->
+                                        <div class="text-center">
+                                            <div *ngIf="enviado && form.contrasena.errors" class="text-danger mb-3">
+                                                <div *ngIf="form.contrasena.errors.pattern">
+                                                    <label class="font-weight-bold"><i class="fa fa-exclamation-circle"></i> 
+                                                        Error, ingrese una contraseña con al menos 8 caracteres,
+                                                        mayúscula, minúscula, caracteres especiales y números.
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>  
+
+
+
                                     </div>
                                 </div>
                             </div>
