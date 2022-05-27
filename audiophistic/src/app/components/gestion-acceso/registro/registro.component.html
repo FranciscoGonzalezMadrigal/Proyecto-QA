@@ -79,11 +79,26 @@
                     </div>
                 </div>
 
+                <!-- Mensaje de error cuando la contraseña no es fuerte -->
+                <div class="text-center">
+                    <div *ngIf="enviado && form.contrasena.errors" class="text-danger mb-3">
+                        <div *ngIf="form.contrasena.errors.pattern">
+                            <label class="font-weight-bold"><i class="fa fa-exclamation-circle"></i> 
+                                Error, ingrese una contraseña con al menos 8 caracteres,
+                                mayúscula, minúscula, caracteres especiales y números.
+                            </label>
+                        </div>
+                    </div>
+                </div>  
+
                 <div class="pt-3">
                     <button class="btn form_btn" type="submit">
                         Registrarse
                     </button>
                 </div>
+
+
+
 
                 <div class="text-center pt-3">
                     <a class="text-muted">¿Ya tiene cuenta?</a>

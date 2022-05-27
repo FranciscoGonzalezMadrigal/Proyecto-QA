@@ -6,7 +6,7 @@ Nos ha tocado realizarle cambios/mejoras al proyecto de **Audiophistic** los cua
 
     ### Mejora ya efectuada :top:
 
- - Puede encontrar esta mejora en **app/component/gestion-acceso/registro** y también en **app/component/perfil/editar-perfil**, cada uno en sus respectivos archivos **.html** y **.component.ts**
+ - Puede encontrar esta mejora en **app/component/gestion-acceso/registro** en sus respectivos archivos **.html** y **.component.ts**
 
 <br>
 <br>

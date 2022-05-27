@@ -21,7 +21,10 @@ export class RegistroComponent implements OnInit {
     this.registro_form = this.formBuilder.group({
       nombre: ['', [Validators.required]],
       correo: ['', [Validators.required]],
-      contrasena: ['', [Validators.required]]
+      contrasena: ['', [Validators.required,
+        
+                        // Se agrega comprobación de contrasena fuerte
+                        Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]]
     });
   }
 
@@ -34,7 +37,9 @@ export class RegistroComponent implements OnInit {
 
     
 
-    if (this.registro_form.invalid) { return; } 
+    if (this.registro_form.invalid) { return; } else {
+      this.toastr.success("Registro realizado con éxito!");
+    }
     
     this.acceso_service.registrarse(registro_info).subscribe(
       (res: any) => {
