@@ -1,0 +1,8 @@
+Revisión de rama RF-Codificacion
+
+LGTM, well done :top:
+
+Me parece bien la implementación a simple vista, igualmente he de admitir que me gustó la utilziacion de Validators.required con la
+obligatoriedad de utilizar los caractares, mayúsuclas y minúsculas para así exigir una mayor seguridad a la aplicación misma, sin la
+necesidad de utilizar otra librerías en el proyecto para realizarlo, logrando así que se mantenga el mismo peso de la aplicación y que
+la arquitectura de la misma se mantenga exactamente igual.
