@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AudifonosComponent } from './audifonos.component';
+import { AudifonosFormComponent } from './audifonos.component';
 
-describe('AudifonosComponent', () => {
-  let component: AudifonosComponent;
-  let fixture: ComponentFixture<AudifonosComponent>;
+describe('AudifonosFormComponent', () => {
+  let component: AudifonosFormComponent;
+  let fixture: ComponentFixture<AudifonosFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AudifonosComponent ]
+      declarations: [ AudifonosFormComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AudifonosComponent);
+    fixture = TestBed.createComponent(AudifonosFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
