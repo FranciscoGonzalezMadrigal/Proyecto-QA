@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ParlantesComponent } from './parlantes.component';
+import { ParlantesFormComponent } from './parlantes.component';
 
-describe('ParlantesComponent', () => {
-  let component: ParlantesComponent;
-  let fixture: ComponentFixture<ParlantesComponent>;
+describe('ParlantesFormComponent', () => {
+  let component: ParlantesFormComponent;
+  let fixture: ComponentFixture<ParlantesFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ParlantesComponent ]
+      declarations: [ ParlantesFormComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ParlantesComponent);
+    fixture = TestBed.createComponent(ParlantesFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
